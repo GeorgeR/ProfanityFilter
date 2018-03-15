@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "ProfanityFilter",
+	"Description": "Customisable profanity filter for Unreal Engine 4",
+	"Category": "Other",
+	"CreatedBy": "George Rolfe",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "ProfanityFilter",
+			"Type": "Developer",
+			"LoadingPhase": "Default"
+		}
+	]
+}
