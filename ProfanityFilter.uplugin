@@ -16,7 +16,7 @@
 	"Modules": [
 		{
 			"Name": "ProfanityFilter",
-			"Type": "Developer",
+			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
 	]
