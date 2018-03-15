@@ -25,7 +25,13 @@ bool UProfanityFilterFunctionLibrary::ContainsProfanity_Text(FText InText, uint8
 {
 	return ContainsProfanity_String(InText.ToString(), InMinimumSeverity);
 }
-	
+
+template <>
+bool UProfanityFilterFunctionLibrary::ContainsProfanity<FString>(FString InString, uint8 InMinimumSeverity)
+{
+	return ContainsProfanity_String(InString, InMinimumSeverity);
+}
+
 void UProfanityFilterFunctionLibrary::LoadCache()
 {
 	if(CachedWords.Num() > 0)

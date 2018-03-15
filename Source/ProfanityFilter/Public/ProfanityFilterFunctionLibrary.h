@@ -21,6 +21,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Profanity Filter", meta = (DisplayName = "ContainsProfanity"))
 	static bool ContainsProfanity_Text(FText InText, uint8 InMinimumSeverity = 50);
+	
+	template <typename TString>
+	static bool ContainsProfanity(TString InString, uint8 InMinimumSeverity = 50);
+
+	template <>
+	static bool ContainsProfanity(FString InString, uint8 InMinimumSeverity);
 
 private:
 	static FName DatatablePath;
@@ -28,3 +34,9 @@ private:
 	
 	static void LoadCache();
 };
+
+template <typename TString>
+bool UProfanityFilterFunctionLibrary::ContainsProfanity(TString InString, uint8 InMinimumSeverity)
+{
+	return ContainsProfanity_String(InString.ToString(), InMinimumSeverity);
+}
