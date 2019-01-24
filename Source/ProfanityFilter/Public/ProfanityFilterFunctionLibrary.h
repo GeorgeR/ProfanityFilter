@@ -13,12 +13,15 @@ class PROFANITYFILTER_API UProfanityFilterFunctionLibrary
 	GENERATED_BODY()
 	
 public:
+	/** Checks the input text (FName) for a profane word, given a minimum severity */
 	UFUNCTION(BlueprintCallable, Category = "Profanity Filter", meta = (DisplayName = "ContainsProfanity"))
 	static bool ContainsProfanity_Name(FName InName, uint8 InMinimumSeverity = 50);
 
+	/** Checks the input text (FString) for a profane word, given a minimum severity */
 	UFUNCTION(BlueprintCallable, Category = "Profanity Filter", meta = (DisplayName = "ContainsProfanity"))
 	static bool ContainsProfanity_String(FString InString, uint8 InMinimumSeverity = 50);
 
+	/** Checks the input text (FText) for a profane word, given a minimum severity */
 	UFUNCTION(BlueprintCallable, Category = "Profanity Filter", meta = (DisplayName = "ContainsProfanity"))
 	static bool ContainsProfanity_Text(FText InText, uint8 InMinimumSeverity = 50);
 	
